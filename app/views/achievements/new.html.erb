@@ -1,0 +1,9 @@
+<%= simple_form_for @achievement do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description, as: :text %>
+  <%= f.label :privacy %>
+  <%= f.select :privacy, Achievement.privacies.keys %>
+  <%= f.input :featured %>
+  <%= f.input :cover_image, as: :file %>
+  <%= f.button :submit %>
+<% end %>
