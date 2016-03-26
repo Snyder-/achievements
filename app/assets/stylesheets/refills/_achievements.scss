@@ -1,0 +1,65 @@
+.achievement {
+  $base-border-radius: 3px !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $achievement-gutter: 1.4em;
+  $achievement-image-padding: 0.7em;
+  $achievement-image-width: 4em;
+  $achievement-color: $base-font-color;
+  $achievement-background: lighten($action-color, 15%);
+  $achievement-detail-color: transparentize($achievement-color, 0.5);
+  $achievement-image-vert-alignment: top;
+
+  border-bottom: 1px solid transparentize($achievement-color, 0.9);
+  display: table;
+  margin-bottom: $base-spacing;
+  padding-bottom: 1em;
+  width: 100%;
+
+  .achievement-image,
+  .achievement-content {
+    display: table-cell;
+    vertical-align: $achievement-image-vert-alignment;
+  }
+
+  .achievement-image {
+    padding-right: $achievement-gutter;
+
+    > img {
+      background: $achievement-background;
+      border-radius: $base-border-radius;
+      display: block;
+      height: auto;
+      max-width: none;
+      padding: $achievement-image-padding;
+      width: $achievement-image-width;
+    }
+
+    .achievement-reverse-order & {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .achievement-content {
+    width: 100%;
+
+    h1 {
+      font-size: 1em;
+      margin: 0 0 0.5em 0;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    p.achievement-detail {
+      color: $achievement-detail-color;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  }
+}

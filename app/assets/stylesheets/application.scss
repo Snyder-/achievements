@@ -2,8 +2,38 @@
 
 @import "normalize-rails";
 
+$mobile: max-width 400px;
+$desktop: max-width 700px;
 @import "bourbon";
+// $visual-grid: true !default;
+$visual-grid-color: #ABC;
+// $visual-grid-index: front;
 @import "neat";
 
 @import "base/base";
 @import "refills/flashes";
+@import "refills/achievements";
+@import "refills/footer";
+@import "refills/navigation";
+
+.content {
+  @include outer-container(90%);
+}
+
+.achievements {
+  @include outer-container;
+}
+
+.achievement {
+  @include span-columns(6);
+  @include pad(20px);
+  @include omega(2n);
+  background-color: rgba(54, 25, 25, .2004);
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+  @include media($desktop) {
+    @include span-columns(12);
+  }
+}
+
