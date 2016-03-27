@@ -1,0 +1,12 @@
+<div class="achievement">
+  <div class="achievement-image">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+  </div>
+  <div class="achievement-content">
+    <h1><%= link_to @achievement.title, achievement_path(@achievement) %></h1>
+    <p><%= @achievement.description %></p>
+    <p class="achievement-detail"><%= time_ago_in_words(@achievement.created_at) %> ago</p>
+    <p><%= link_to "Delete Achievement", achievement_path(@achievement), 
+data: {:confirm => 'Are you sure?'}, :method => :delete %></p>
+  </div>
+</div>

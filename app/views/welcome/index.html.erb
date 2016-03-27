@@ -10,7 +10,7 @@
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
         </div>
         <div class="achievement-content">
-          <h1><%= achievement.title %></h1>
+          <h1><%= link_to achievement.title, achievement_path(achievement) %></h1>
           <p><%= achievement.description %></p>
           <p class="achievement-detail"><%= time_ago_in_words(achievement.created_at) %> ago</p>
         </div>

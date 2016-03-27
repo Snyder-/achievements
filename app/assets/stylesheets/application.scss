@@ -18,6 +18,7 @@ $visual-grid-color: #ABC;
 
 .content {
   @include outer-container(90%);
+  @include pad(20px);
 }
 
 .achievements {

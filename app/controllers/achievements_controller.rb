@@ -14,6 +14,17 @@ class AchievementsController < ApplicationController
     end
   end
 
+  def show
+    @achievement = Achievement.find(params[:id])
+  end
+
+  def destroy
+    @achievement = Achievement.find(params[:id])
+    @achievement.delete
+    flash.notice = 'Achievement has been deleted'
+    redirect_to root_url
+  end
+
   private
 
   def achievement_params
